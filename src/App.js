@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Briefcase, Award, Mail, Phone, Linkedin, ChevronDown } from 'lucide-react';
+import fotoPerfil from './images/foto-perfil.jpg';
 
 export default function Portfolio() {
   const [, setActiveSection] = useState('home');
@@ -49,9 +50,15 @@ export default function Portfolio() {
       <section id="inicio" className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <Code className="w-16 h-16 text-purple-400" />
+            {/* Foto de perfil con efectos */}
+            <div className="relative w-48 h-48 mx-auto mb-6">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full animate-pulse blur-lg opacity-75"></div>
+              <div className="relative w-full h-full rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
+                <img 
+                  src={fotoPerfil} 
+                  alt="Andy Mallcco" 
+                  className="w-full h-full rounded-full object-cover border-4 border-slate-900"
+                />
               </div>
             </div>
             <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
